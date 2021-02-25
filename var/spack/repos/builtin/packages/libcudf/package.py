@@ -30,6 +30,8 @@ class Libcudf(CMakePackage):
 
         # args.append('-DGPU_ARCHES')
         args.append('-DUSE_NVTX=ON')
+        args.append('-DBUILD_TESTING=OFF')
+        args.append('-DBUILD_TESTS=OFF')
         args.append('-DBUILD_BENCHMARKS=OFF')
         args.append('-DDISABLE_DEPRICATION_WARNING=ON')
         args.append('-DPER_THREAD_DEFAULT_STREAM=OFF')

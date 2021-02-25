@@ -71,6 +71,7 @@ class Thrift(Package):
 
         options.append('--with-boost=%s' % spec['boost'].prefix)
         options.append('--enable-tests=no')
+        options.append('--with-dotnetcore=no')
 
         options.append('--with-nodejs=no')
         options.append('--with-c=%s' % ('yes' if '+c' in spec else 'no'))
