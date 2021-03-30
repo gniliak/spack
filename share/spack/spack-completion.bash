@@ -453,7 +453,7 @@ _spack_buildcache_update_index() {
 _spack_cd() {
     if $list_options
     then
-        SPACK_COMPREPLY="-h --help -m --module-dir -r --spack-root -i --install-dir -p --package-dir -P --packages -s --stage-dir -S --stages -b --build-dir -e --env"
+        SPACK_COMPREPLY="-h --help -m --module-dir -r --spack-root -i --install-dir -p --package-dir -P --packages -s --stage-dir -S --stages --source-dir -b --build-dir -e --env"
     else
         _all_packages
     fi
@@ -579,7 +579,7 @@ _spack_compilers() {
 }
 
 _spack_concretize() {
-    SPACK_COMPREPLY="-h --help -f --force"
+    SPACK_COMPREPLY="-h --help -f --force --test"
 }
 
 _spack_config() {
@@ -793,7 +793,7 @@ _spack_env_deactivate() {
 _spack_env_create() {
     if $list_options
     then
-        SPACK_COMPREPLY="-h --help -d --dir --without-view --with-view"
+        SPACK_COMPREPLY="-h --help -d --dir --keep-relative --without-view --with-view"
     else
         _environments
     fi
@@ -1089,7 +1089,7 @@ _spack_load() {
 _spack_location() {
     if $list_options
     then
-        SPACK_COMPREPLY="-h --help -m --module-dir -r --spack-root -i --install-dir -p --package-dir -P --packages -s --stage-dir -S --stages -b --build-dir -e --env"
+        SPACK_COMPREPLY="-h --help -m --module-dir -r --spack-root -i --install-dir -p --package-dir -P --packages -s --stage-dir -S --stages --source-dir -b --build-dir -e --env"
     else
         _all_packages
     fi
